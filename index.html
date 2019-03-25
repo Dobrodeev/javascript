@@ -64,6 +64,7 @@
     {
         document.writeln(i);
     }
+
 </script>
 
 <!--<p>Count()</p>-->
@@ -73,5 +74,10 @@
 <button onclick="document.getElementById('myimg').src='pic_bulboff.gif'">Выключить лампу</button>
 <button onclick="document.getElementById('myimg').src='pic_bulbon.gif'">Включить лампу</button>
 <img src="pic_bulboff.gif" alt="лампочка" style="width:100px" id="myimg">
+
+<div id="someID"></div>
+<script>
+    document.getElementById("someID").innerHTML = 'Some text for someID';
+</script>
 </body>
 </html>
