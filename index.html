@@ -9,11 +9,13 @@
         }
     -->
     </style>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <script src="script.js"></script>
 </head>
 
 <body>
-
+<script src="assets/jquery-3.2.1.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
 <!--<div id="block"></div>
 <script>
     document.getElementById('block').innerHTML='hell';
@@ -68,5 +70,8 @@
 
 <div id="demo"></div>
 
+<button onclick="document.getElementById('myimg').src='pic_bulboff.gif'">Выключить лампу</button>
+<button onclick="document.getElementById('myimg').src='pic_bulbon.gif'">Включить лампу</button>
+<img src="pic_bulboff.gif" alt="лампочка" style="width:100px" id="myimg">
 </body>
 </html>
