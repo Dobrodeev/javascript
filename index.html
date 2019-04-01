@@ -36,8 +36,11 @@
 
 </script>-->
 
-<!--<div id="demo">By</div>
-<button onclick="myfunc()">Click</button>-->
+<div id="demo">Игральные карты</div>
+<button onclick="myfunc()">Click</button>
+
+<div id="suit">Масть карты</div>
+<button onclick="suitOfCard()">Get suit</button>
 <!--<p>Rabbits</p>-->
 <script>
     /*alert('first');
@@ -98,8 +101,8 @@ for (var i=0; arr.length; i++)
         alert(arr[i]);
     }
 }*/
-var num, season;
-num = +prompt('Число от 1 до 4');
+/*var num, season;
+num = +prompt('Число от 1 до 4. Будет выводится пора года: зима, весна, лето, осень.');
 switch (num)
 {
     case 1: season='зима';
@@ -112,9 +115,10 @@ switch (num)
     break;
     default: season = '';
 }
-alert(season);
+alert(season);*/
+// document.getElementById('someID').innerHTML = 'Some text for testing.'
 </script>
-
+<!--<p id="someID">Было</p>-->
 <!--<p>Count()</p>-->
 
 <!--<div id="demo"></div>
@@ -130,5 +134,8 @@ alert(season);
 <button type="button" onclick="textFunction()">Вызвать некоторую функцию</button>
 
 <button type="button" onclick="f()">Числа по возрастанию</button>-->
+
+<!--<button type="button" onclick="document.getElementById('season')">Времена года. (сезоны)</button>-->
+<!--<p id="season"></p>-->
 </body>
 </html>
