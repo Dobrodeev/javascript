@@ -50,7 +50,10 @@ function suitOfCard() {
 }
 function textFunction()
 {
-    document.getElementById("someID").innerHTML = 'Some text for someID';
+    // document.getElementById("demonstration").innerHTML = 'Some text for someID. Мы вызвали демонстрацию.';
+    // document.write('Теперь  используем document.write')
+    var result = 'Какой-то результат.'
+    window.alert(result)
 }
 
 function f() {
