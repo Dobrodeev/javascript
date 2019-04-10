@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Вывод массива</h2>
+<p id="demo"></p>
+<script>
+    /*var array = ['Vane', 'Man', 'Daf']
+    alert(array[0])
+    alert(array[array.length-1])*/
+
+    /*text+='<ul>';
+    var arr,i, arrlength, text;
+    arr = ['banana', 'apple', 'mango'];
+    arrlength = arr.length;
+    for (i = 0; i < arrlength; i++){
+        text += '<li>' + arr[i] + '</li>';
+    }
+    text+='</ul>';
+    document.getElementById('demo').innerHTML=text;*/
+
+    /*var arr, text;
+    arr = ['banana', 'apple', 'mango'];
+    text='<ul>';
+    arr.forEach(myarr);
+    text+='</ul>';
+    document.getElementById('demo').innerHTML=text;
+    function myarr(value) {
+        text += '<li>' + value + '</li>';
+    }*/
+    /*var names = 'John, Joan, Jacob, Mathew, Marc, Luke, Peter';
+    var arr = names.split(',');
+    for (var i = 0; i < names.length; i++){
+        alert('Вам сообщение от ' + arr[i]);
+    }*/
+
+    /*var arr = [1, 2, 3];
+    newAerr = arr.concat(5, 6, 7);
+    alert(newAerr);*/
+    // var arr = ['Man1', 'Man12', 'Man137'];
+    // var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+    /*var newArr = arr.map(function (arr) {
+        if (arr % 2 === 0)
+        {
+            return arr;
+        }
+        // return arr.length;
+    });
+    alert(newArr);*/
+    var arr = [-1, -2, 3, -4, -5, 6, 7, 8, 9, -10];
+    function positive(number) {
+        return number > 0;
+    }
+    alert(arr.every(positive));
+</script>
+</body>
+</html>
