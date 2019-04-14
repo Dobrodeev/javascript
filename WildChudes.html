@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+/*
+выбрать случайное число
+пока наше слово не угадано
+показать текущее состояние игры
+запросить букву
+если игрок хочет ввести он вводит
+
+иначе если ответ не подходит - сообщить об ошибке
+
+ */
+var words = ['программа', 'лекция', 'весна', 'фреймворк'];
+var word = words[Math.floor(Math.random()*words.length)];
+// alert(word);
+var wordl = word.length;
+// alert(wordl);
+var answer = [];
+for (var i = 0; i < wordl; i ++)
+{
+    answer[i] = 'X';
+}
+var letters = word.length;
+// alert(letters);
+alert(answer);
+while (letters > 0)
+{
+    answer.join(' ');
+    var guess = prompt('Угадай букву или нажми отмена для выхода');
+    if (guess === null)
+    {
+        break;
+    }
+    else if (guess.length > 1)
+    {
+        alert('Введите одну букву.');
+    }
+    else {
+        for (var x = 0; x < word.length; x ++){
+            if (word[x] === guess){
+                answer[x] = guess;
+                letters --;
+            }
+        }
+    }
+    alert(answer.join(' '));
+}
+
+</script>
+</body>
+</html>
