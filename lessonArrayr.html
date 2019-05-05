@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script type="text/javascript" src="assets/jquery-3.3.1.js"></script>
 </head>
 <body>
 <h2>Вывод массива</h2>
@@ -50,11 +51,49 @@
         // return arr.length;
     });
     alert(newArr);*/
-    var arr = [-1, -2, 3, -4, -5, 6, 7, 8, 9, -10];
+    /*var arr = [-1, -2, 3, -4, -5, 6, 7, 8, 9, -10];
     function positive(number) {
         return number > 0;
     }
-    alert(arr.every(positive));
+    alert(arr.every(positive));*/
+    /* Перебор массива for, forEach*/
+    var i, text, afterJudasApostol, the_twelve_apostoles = ['Simon Peter', 'Andrew', 'James', 'John', 'Philip', 'Bartholomew', 'Mathew', 'Thomas', 'James', 'Simon Zealot', 'Judas son of James', 'Judas Iscariot'];
+    afterJudasApostol = ['Joseph called Barsabbas (Justus)', 'Matthias'];
+    // Matthias chosen to replace Judas
+    text = '';
+    for (i = 0; i < the_twelve_apostoles.length; i++){
+        text += the_twelve_apostoles[i] + ' ';
+    }
+    // alert(text);
+    function myarray(value){
+        text += ' ' + value + '';
+    }
+    the_twelve_apostoles.forEach(myarray);
+    document.getElementById('demo').innerHTML = text;
+    // print "Привет, я только что купил {$this->name} - {$this->color} за {$this->price} USD <br />";
+    var cars = ['Saab', 'BMW', 'Kia', 'Hyundai', 'Ssang Young', 'Dacia', 'MG', 'Volvo'];
+    // document.getElementById('demo').innerHTML = cars[2];
+    // var contents = $('#demo');
+    // alert(contents.val());
+    // alert($('#demo').innerHTML = cars[2]);
+    /*cars[0] = 'Opel';
+    document.getElementById('demo').innerHTML = cars;
+    document.getElementById('demo').innerText = cars.length;*/
+    // alert(cars.length);
+    var last, j, length, someText;
+    last = cars[cars.length - 1];
+    // alert(last);
+    length = cars.length;
+    for ( i = 0; i < length; i ++)
+    {
+        someText += cars[i] + ' ';
+    }
+    // alert($('#demo').innerHTML = someText);
+    function arrayOutput(value) {
+        someText += value + ' ';
+    }
+    cars.forEach(arrayOutput);
+    alert($('#demo').innerHTML = someText);
 </script>
 </body>
 </html>
