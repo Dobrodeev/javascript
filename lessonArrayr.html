@@ -6,8 +6,9 @@
     <script type="text/javascript" src="assets/jquery-3.3.1.js"></script>
 </head>
 <body>
-<h2>Вывод массива</h2>
+<h2>12 Апостолов</h2>
 <p id="demo"></p>
+<button type="submit" onclick="changeBetrayer()">После замены Иуды</button>
 <script>
     /*var array = ['Vane', 'Man', 'Daf']
     alert(array[0])
@@ -60,16 +61,27 @@
     var i, text, afterJudasApostol, the_twelve_apostoles = ['Simon Peter', 'Andrew', 'James', 'John', 'Philip', 'Bartholomew', 'Mathew', 'Thomas', 'James', 'Simon Zealot', 'Judas son of James', 'Judas Iscariot'];
     afterJudasApostol = ['Joseph called Barsabbas (Justus)', 'Matthias'];
     // Matthias chosen to replace Judas
-    text = '';
+    // text = '';
     for (i = 0; i < the_twelve_apostoles.length; i++){
         text += the_twelve_apostoles[i] + ' ';
     }
     // alert(text);
-    function myarray(value){
-        text += ' ' + value + '';
-    }
+
+    text = '<ol>';
     the_twelve_apostoles.forEach(myarray);
+    text += '</ol>';
+    function myarray(value){
+        text += '<li>' + value + '</li>';
+    }
     document.getElementById('demo').innerHTML = text;
+
+    function changeBetrayer(value) {
+        var first, last;
+        first = value[0];
+        last = value[value.length - 1];
+        alert(last);
+    }
+    changeBetrayer(the_twelve_apostoles);
     // print "Привет, я только что купил {$this->name} - {$this->color} за {$this->price} USD <br />";
     var cars = ['Saab', 'BMW', 'Kia', 'Hyundai', 'Ssang Young', 'Dacia', 'MG', 'Volvo'];
     // document.getElementById('demo').innerHTML = cars[2];
@@ -93,7 +105,9 @@
         someText += value + ' ';
     }
     cars.forEach(arrayOutput);
-    alert($('#demo').innerHTML = someText);
+    // alert($('#demo').innerHTML = someText);
+
+
 </script>
 </body>
 </html>
