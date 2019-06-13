@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<a href="http://google.com.ua">google</a><br>
+<a href="http://ukr.net">ukr</a><br>
+<a href="http://yandex.ua">google</a><br>
+<input type="submit" value="show" onclick="show()">
+<div class="elem" id="elem"></div>
+<script>
+    function show() {
+        let a = document.querySelectorAll('a');
+        for (let i = 0; i < a.length; i ++){
+            a[i].innerHTML = a[i].innerHTML + '(' + a[i].getAttribute('href') + ')';
+        }
+    }
+    // div = document.querySelectorAll('.elem');
+    div = document.getElementById('elem');
+    div.classList.add('someClass');
+    let classNames = div.classList;
+    // alert(classNames);
+    for (let i = 0; i < classNames.length; i ++){
+        alert(classNames[i]);
+    }
+</script>
+</body>
+</html>
