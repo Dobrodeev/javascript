@@ -1,0 +1,56 @@
+/*p:nth-of-type(2){
+    background: #0b2e13;
+}
+p:nth-last-of-type(1){
+    background: #1b1e21;
+}
+div{
+    background: #0c5460;
+}
+h5{
+    background: #005cbf;
+}*/
+/*nth-of child - отсчет идет от родителя от body и div*/
+/*p{
+    background: #9fcdff;
+}*/
+
+/*li:first-child{
+    background: #005cbf;
+}*/
+/*li:last-child{
+    background: #1b1e21;
+}*/
+/*p:only-child{
+    background: #0c5460;
+}*/
+/*
+p:first-of-type{
+    background: #0b2e13;
+}*/
+/*p:last-of-type{
+    background: #6f42c1;
+}*/
+/*p:only-of-type{
+    background: #6f42c1;
+}*/
+/*p:nth-child(4)
+{
+    background: #6f42c1;
+}*/
+/*p:nth-of-type(1){
+    background: #6f42c1;
+}*/
+/*p:nth-last-of-type(1){
+    background: #6f42c1;
+}*/
+/*p:nth-child(even){
+    background: #6f42c1;
+}*/
+/*
+p:nth-child(odd){
+    background: #6f42c1;
+}*/
+p:nth-child(3n){
+    background: #6f42c1;
+}
