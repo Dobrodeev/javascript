@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <style>
+        .fraction, .top, .bottom {
+            padding: 0 5px;
+        }
+
+        .fraction {
+            display: inline-block;
+            text-align: center;
+        }
+
+        .bottom{
+            border-top: 1px solid #000;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<script src="assets/jquery-3.3.1.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<!--<ul>
+    <li class="chapter">Глава I
+        <ul>
+            <li class="subchapter">Глава <span class="num">1.1</span></li>
+            <li class="subchapter">Глава <span class="num">1.2</span></li>
+        </ul>
+    </li>
+</ul>-->
+<!--<table id="age-table" class="article">
+    <tr>
+        <td>Ваш возраст:</td>
+
+        <td>
+            <label>
+                <input type="radio" name="age" value="young"> младше 18
+            </label>
+            <label>
+                <input type="radio" name="age" value="mature" checked> от 18 до 50
+            </label>
+            <label>
+                <input type="radio" name="age" value="senior"> старше 60
+            </label>
+        </td>
+    </tr>
+
+</table>-->
+
+<h3>Стационарные случайные функции</h3>
+<h4>&sect;1. Определение стационарной случайной функции</h4>
+<p>Среди случайных функций целесообразно выделить класс функций, математические ожидания которых сохраняют
+одно и тоже постоянное значение при всех знаяениях аргумента t и корреляционные функции которых зависят только
+    от разности аргументов t<sub>2</sub>-t<sub>1</sub>. Ясно, что для таких функций начало отсчета аргумента
+может быть выбрано произвольно. Такие случайные функции называют "чтационарными в широком смысле" в отличие от
+случайных функций, "стационарных в узком смысле" (все характеристики этих функций не зависят от самих значений
+    аргументов, но зависят от взаимного расположения на оси t).</p>
+<p> Из стационарности в узком смысле следует стационарность в широком смысле; обратное утверждение неверно.</p>
+<p>Поскольку мы ограничиваемся корреляционной теорией, которая использует только две характеристики (математическое
+    ожидание и корреляционную функцию), далее рассмотрим случайные функции, стационарные в широком смысле, причем
+будем называть их просто стационарными.</p>
+<p><i>Стационарной</i> называют случайную функцию, X(t), математическое ожидание которой постоянно при всех
+    значениях аргумента t и корреляционная функция которой зависит только от разности аргументов
+    t<sub>2</sub>-t<sub>1</sub>. Из этого определения следует, что:</p>
+<ol class="someclass">
+    <li> корреляционная функция стационарной случайной функции есть функция одного аргумента
+        tay=t<sub>2</sub>-t<sub>1</sub>, т. е. K<sub>x</sub>(t<sub>2</sub>-t<sub>1</sub>)=k<sub>x</sub>(t<sub>2</sub>-t<sub>1</sub>)=k<sub>x</sub>(tay);</li>
+    <li>дисперсия стационарной случайной функции постоянна при всех значениях аргумента t и равна значению ее
+        корреляционной функции в начале координат (tay=0), т. е. D<sub>x</sub>(t)=K<sub>x</sub>(t<sub>2</sub>-t<sub>1</sub>)=k<sub>x</sub>(t<sub>2</sub>-t<sub>1</sub>)=k<sub>x</sub>(0).</li>
+</ol>
+<h4>&sect;2. Свойства корреляционной функции стационарной случайной функции</h4>
+<p><i>Свойство 1.</i> Корреляционная функция стационарной случайной функции есть четная функция:
+    k<sub>x</sub>(&tau;) = k<sub>x</sub>(-&tau;).</p>
+<p><i>Свойство 2.</i> Абсолютная величина корреляционной функции стационарной случайной функции не
+    превышает ее значения в начале координат: |k<sub>x</sub>>(&tau;)| <= k<sub>x</sub>(0).</p>
+<h4>&sect;3. Нормированная корреляционная функция стационарной случайной функции</h4>
+<p>Кроме корреляционной функции для оценки степени зависимости сечений стационарной случайной функции используют
+еще одну характеристику - нормированную корреляционную функцию.</p>
+<p>Ранее нормированная корреляционная функция была определена так:
+    p<sub>x</sub>(t<sub>1</sub> - t<sub>2</sub>) = K<sub>x</sub>(t<sub>1</sub> - t<sub>2</sub>)/(s<sub>x</sub>(t<sub>1</sub>)*s<sub>x</sub>(t<sub>2</sub>)). (*)</p>
+<p>В частности, для стационарной функции числитель и знаменатель этой дроби имеют вид
+    K<sub>x</sub>(t<sub>1</sub>, t<sub>2</sub>) = k<sub>x</sub>(tay), s<sub>x</sub>(t) = sqr(D<sub>x</sub>(t)) = sqr(k<sub>x</sub>(0)).
+    Следовательно, для стационарной функции правая часть (*) равна k<sub>x</sub>(&tau;)/k<sub>x</sub>(0)
+и является функцией одного аргумента tay; очевидно, и левая часть (*) - функция от &tau;.</p>
+<p><i>Нормированной корреляционной функцией стационарной случайной функции</i> называют неслучайную функцию
+    аргумента tay: p<sub>x</sub>(&tau;) = k<sub>x</sub>(&tau;)/k<sub>x</sub>(0).</p>
+<p><i>Абсолютная величина нормированной корреляционной функции стационарной случайной функции не превышает
+единицы.</i> В учебных целях докажем его непосредственно для стационарной функции.</p>
+<p>Приняв во внимание, что абсолютная величина частного равна частному абсолютных величин, получим
+    |p<sub>x</sub>(&tau;)| = |k<sub>x</sub>(&tau;)/k<sub>x</sub>(0)| = |k<sub>x</sub>(&tau;)|/|k<sub>x</sub>(0)|.
+Учитывая, что |k<sub>x</sub>(&tau;)| < |k<sub>x</sub>(0), окончательно имеем <br>
+    |p<sub>x</sub>(&tau;)| <= 1.</p>
+</p>
+<h4>&#167;4. Стационарно связанные случайные функции</h4>
+<p><i>Стационарно связанными</i> называют две случайные функции X(t) & Y(t), если их взаимная корреляционная функция зависит
+только от разности аргументов &tau; = t <sub>2</sub> - t <sub>1</sub>: <br> R<sub>xy</sub> (t <sub>1</sub>, t <sub>2</sub>) = r <sub>xy</sub> (&tau;).</p>
+<p>Взаимная корреляционная функция стационарно связанных случайных функций обладает следующим свойством: r <sub>xy</sub> (&#964;) = r <sub>xy</sub> (-&#964;)</p>
+<p>Это равенство следует из свойства 1 взаимно корреляционной функции (при одновременной перестановке индексов и аргументов
+    взаимная корреляционная функция не изменяется): <br>
+r <sub>xy</sub> (t <sub>2</sub> - t <sub>1</sub>) = r <sub>xy</sub> (t <sub>1</sub> - t <sub>2</sub>), или
+r <sub>xy</sub> (&tau;) = r <sub>xy</sub> (-&tau;).</p>
+<p>Геометрически свойство можно истолковать так: график кривой r <sub>xy</sub> (-&tau;) симметричен графику кривой r <sub>xy</sub> (&tau;)
+относительно оси ординат.</p>
+<p>Заметим, что если каждая из двух случайных функций стационарна, то отсюда еще нельзя заключить, что их взаимная корреляционная функция
+зависит только от разности аргументов.</p>
+<p><i>Стационарными и стационарно связанными</i> называют две стационарные случайные функции X(t) &amp; Y(t), взаимная корреляционная функция
+которых зависит только от разности аргументов <br>&tau; = t <sub>2</sub> - t <sub>1</sub>.</p>
+<p><strong>Пример.</strong> Заданы две стационарные случайные функции X(t) = cos(t + &phi;) &amp; Y(t) = sin(t + &phi;), где &phi; -
+случайная величина, распределенная равномерно на интервале (0, 2&pi;). Доказать, что заданные стационарные функции стационарно связанны.</p>
+<p><i>Решение.</i> Ранее было найдено, что m <sub>x</sub> (t) = 0; аналогично можно получить, что m <sub>y</sub> (t) = 0.
+Запишем центрированные функции: <br>
+X&prime; (t) = X(t) - m <sub>x</sub> (t) = X(t) = cos(t + &phi;), <br>
+Y&prime; (t) = Y(t) - m <sub>y</sub> (t) = Y(t) = sin(t + &phi;).</p>
+<p>Найдем взаимную корреляционную функцию: <br>
+R <sub>xy</sub> (t <sub>1</sub>, t <sub>2</sub>) = M[X&prime; (t <sub>1</sub> Y&prime; (t <sub>2</sub>))] =
+M[cos(t <sub>1</sub> + &phi;) + sin (t <sub>2</sub> + &phi;)] =
+M <span class="fraction">sin(t2-t1) + sin(t1 + t2 + 2&phi;)/2</span> = <span class="fraction">sin(t2 - t1)/2</span> + M
+<span class="fraction">sin(t1 +t2 + 2&phi;)/2</span>.</p>
+<p>Легко убедиться, что математическое ожидание второго слагаемого равно нулю, поэтому
+R <sub>xy</sub> (t <sub>1</sub>, t <sub>2</sub>) = <span class="fraction">1/2</span> sin (t <sub>2</sub> - t <sub>1</sub>).</p>
+<p>Итак, взаимная корреляционная функция заданных стационарных случайных функций зависит только от разности аргументов;
+следовательно, эти функции стационарно связаны.</p>
+<h4>&sect;5. Корреляционная функция производной стационарной случайной функции</h4>
+<p><strong>Теорема. </strong><i>Корреляционная функция производной X&prime;(t) = x&prime; дифференцируемой стационарной случайной функции
+ X(t) равна второй производной от ее корреляционной функции, взятой со знаком минус:</i><br>
+k <sub>x&prime;</sub> (&tau;) = k&Prime; <sub>x</sub> (&tau;).</p>
+<p><i>Доказательство. </i>Известно, что корреляционная функция производной любой дифференцируемой случайной функции равна второй
+смешанной производной от ее корреляционной функции: <br>
+K <sub>x&prime;</sub> (t <sub>1</sub>, t <sub>2</sub>) = <span class="fraction"> &#8706; <sup>2</sup> K <sub>x</sub> (t <sub>1</sub>, t <sub>2</sub>)/&#8706;t <sub>1</sub>&#8706;t <sub>2</sub></span>.</p>
+<p>По условию, X(t) - стационарная функция, поэтому ее корреляционная функция зависит только от разности аргументов:
+    <br>K <sub>x</sub> = k <sub>x</sub>(&tau;).</p>
+<p>Из соотношения &tau; = t <sub>2</sub> - t <sub>1</sub> следует, что <br>
+    <span class="fraction">&#8706;&tau;/&#8706;t1</span> = - 1 и <span class="fraction">&#8706;&tau;/&#8706;t2 </span>= 1. (*)</p>
+<p>Учитывая равенства (*), получим <br>
+K <sub>x&prime;</sub> (t <sub>1</sub>, t <sub>2</sub>) = <span class="fraction">&#8706;2kx(&tau;)/&#8706;t1&#8706;t2</span>=
+<span class="fraction">&part;/&part;t1 </span> <span class="fraction">&part;kx(&tau;)/&part;t2 </span>= <span class="fraction">&part;/&part;t1</span>
+<span class="fraction">dkx(&tau;)/d&tau;</span> <span class="fraction">&part;&tau;/&part;t2</span>=
+<span class="fraction"> d2kx(&tau;)/d&tau;2</span> <span class="fraction">&part;&tau;/&part;t1</span>=
+k&Prime;<sub>x</sub> (&tau;) ( - 1) = - k&Prime; <sub>x</sub> (&tau;).</p>
+<p>Видим, что искомая корреляционная функция зависит только от &tau;, поэтому K <sub>x&prime;</sub> (t <sub>1</sub>, t <sub>2</sub>) = k <sub>x&prime;</sub> (&tau;).</p>
+<p>Итак, k <sub>x&prime;</sub> (&tau;) = - k <sub>x&Prime;</sub> (&tau;).</p>
+<p><strong>Пример.</strong> Задана корреляционная функция k <sub>x</sub> (&tau;) = 2e <sup>-0,5&tau;</sup> стационарной случайной функции X(t).
+Найти: а) корреляционную функцию; б) дисперсию производной X&prime; (t) = x&prime;.</p>
+<p><i>Решение.</i> а) Продифференцировав дважды заданную корреляционную функцию и изменив знак результата на противоположный, найдем
+искомую корреляционную функцию: <br>
+    k <sub>x&prime;</sub> (&tau;) = 2e <sup>-0,5&tau;<sup>2</sup></sup> (1 - &tau; <sup>2</sup>).</p>
+<p>б) Положив &tau; = 0, получим искомую дисперсию: <br>
+D<sub>x&prime;</sub> = k<sub>x&prime;</sub> (0) = 2.</p>
+<span class="fraction">1/2</span>
+<span class="fraction">3/4</span>
+<span class="fraction">1/32</span>
+<span class="fraction">77/102</span>
+<span class="fraction">&#8706;u/&#8706;x&#8706;y</span>
+<ul>
+    <li>Черва &hearts;</li>
+    <li>Буба &diamondsuit;</li>
+    <li>Пика &spades;</li>
+    <li>Хреста &clubs;</li>
+</ul>
+<div class="article">Статья</div>
+<div class="long article">Длинная статья</div>
+<table class="table table-bordered">
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+        <td>10</td>
+        <td>11</td>
+        <td>12</td>
+        <td>13</td>
+        <td>14</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+<ul class="list-group">
+    <li class="list-group-item">Pole Dance</li>
+    <li class="list-group-item">Pole Exotic</li>
+    <li class="list-group-item">Pole Art</li>
+    <li class="list-group-item">Pole Sport</li>
+    <li class="list-group-item">High Heels</li>
+    <li class="list-group-item">Go go</li>
+</ul>
+<script>
+    // var elems = document.getElementsByName('age');
+    // var tableElem = document.getElementById('age-table');
+    // var elements = document.getElementsByName('age');
+    // var elements = tableElem.getElementsByTagName('input');
+
+    /*var elements = document.getElementsByClassName('article');
+    for (var i = 0; i < elements.length; i++) {
+        var input = elements[i];
+        alert( input.value + ': ' + input.checked );
+    }*/
+    // var numberSpan = document.querySelector('.num');
+
+    // ближайший элемент сверху подходящий под селектор li
+    // alert(numberSpan.closest('li').className) // subchapter
+
+    // ближайший элемент сверху подходящий под селектор .chapter
+    // alert(numberSpan.closest('.chapter').tagName) // LI
+
+    // ближайший элемент сверху, подходящий под селектор span
+    // это сам numberSpan, так как поиск включает в себя сам элемент
+    // alert(numberSpan.closest('span') === numberSpan) // true
+    // var elements = document.getElementsByClassName('subchapter');
+    // alert(elements);
+    $('.fraction').each(function(key, value) {
+        $this = $(this)
+        var split = $this.html().split("/")
+        if( split.length == 2 ){
+            $this.html('<span class="top">'+split[0]+'</span><span class="bottom">'+split[1]+'</span>')
+        }
+    });
+</script>
+</body>
+</html>
