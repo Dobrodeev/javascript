@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="palindrom.js"></script>
+</head>
+<body>
+<input type="text" id="number" placeholder="введите слово">
+<button type="submit" id="button" onclick="f()">Button</button>
+
+<p id="text">Для таймера</p>
+<script>
+    window.setInterval(timer, 1000);
+    var p = document.getElementById('text');
+    function timer() {
+        if (p.style.color === 'red'){
+            p.style.color = 'green';
+        }
+        else{
+            p.style.color = 'red';
+        }
+    }
+</script>
+</body>
+</html>
