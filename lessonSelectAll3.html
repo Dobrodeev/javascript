@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li class="chapter">Chapter 1
+        <ul>
+            <li class="subchapter"><span class="num">1.1.</span></li>
+            <li class="subchapter"><span class="num">1.1.</span></li>
+        </ul>
+    </li>
+</ul>
+<div>Привет мир</div>
+<script>
+    var number = document.querySelector('.num');
+    // var n = number.closest('li').className;
+    var n = number.closest('li').tagName;
+    // alert(n);
+    var nc = document.querySelector(n);
+    // var div = document.querySelector('div');
+    // var div = document.body.children[1];
+    var div = document.querySelector('ul+div');
+    // alert(div);
+    div.outerHTML = '<p>New element</p>';
+    alert(div.outerHTML);
+</script>
+</body>
+</html>
