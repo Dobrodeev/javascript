@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>Start</div>
+<ul>
+    <li>info</li>
+</ul>
+<div>End</div>
+<table id="h">
+    <tr><td>Ваш возраст</td><td>
+        <label for="">
+        <input type="radio" value="young" name="age"><18
+    </label>
+        <label for="">
+            <input type="radio" value="middle" name="age">>18
+        </label>
+        <label for="">
+            <input type="radio" value="senior" name="age">>78
+        </label>
+    </td>
+    </tr>
+    <tr><td>3</td><td>4</td></tr>
+
+</table>
+<button onclick="f()">Result</button>
+<script>
+    // window.open('http://meta.ua');
+    /*document.body.style.background = 'red';
+    document.write(navigator.platform);*/
+/*for (var i = 0; i < document.body.childNodes.length; i ++){
+    document.write(document.body.childNodes[i])
+}*/
+
+/*var first = document.body.firstChild;
+alert(first);*/
+
+/*var table = document.body.children[3];
+alert(table.rows[0].cells[0].innerHTML);*/
+function f() {
+    var table  = document.getElementById('h');
+    var input = table.getElementsByTagName('input');
+    for (var i = 0; i < input.length; i ++){
+        var elem = input[i];
+        alert(elem.value + ':' + elem.checked)
+    }
+}
+
+</script>
+</body>
+</html>
