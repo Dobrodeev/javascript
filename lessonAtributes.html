@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    #tabs {
+        width: 322px;
+        margin: 0 auto;
+        border: 2px solid #409D36;
+        border-radius: 10px;
+        padding: 15px;
+        font-family: Arial;
+    }
+    .tabs__list {
+        list-style-type: none;
+        padding-left: 0px;
+        margin: 0;
+        line-height: 33px;
+        display: inline-block;
+        padding-bottom: 1px;
+        border-bottom: 1px solid #f5f3f0;
+        margin-bottom: 5px;
+        border-radius: 3px;
+    }
+    .tabs__item {
+        display: inline-block;
+        color: #183e4c;
+        white-space: nowrap;
+        font-family: Arial;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 0px 13px;
+        background: #F5F3F0;
+        cursor: pointer;
+        border-radius: 7px 7px 0 0;
+        transition: all .2s;
+    }
+    .tabs__item.select {
+        color: #fff;
+        background: #409d36;
+    }
+    .tabs__text {
+        display: none;
+        font: 12px Arial;
+        text-align: justify;
+    }
+    .tabs__text.select {
+        display: block;
+    }
+</style>
+</head>
+<body>
+<div id="tabs">
+    <ul class="tabs__list">
+        <li class="tabs__item select" data-id="tabs-1">JavaScript</li>
+        <li class="tabs__item" data-id="tabs-2">Jquery</li>
+        <li class="tabs__item" data-id="tabs-3">DOM</li>
+        <li class="tabs__item" data-id="tabs-4">CSS</li>
+    </ul>
+    <div class="tabs__text select" id="tabs-1">
+        <p>
+            JavaScript — прототипно-ориентированный сценарный язык программирования. Является реализацией языка ECMAScript.
+        </p>
+        <p>
+            JavaScript обычно используется как встраиваемый язык для программного доступа к объектам приложений. Наиболее широкое применение находит в браузерах как язык сценариев для придания интерактивности веб-страницам.
+        </p>
+    </div>
+    <div class="tabs__text" id="tabs-2">
+        <p>
+            jQuery — библиотека JavaScript, фокусирующаяся на взаимодействии JavaScript и HTML. Библиотека jQuery помогает легко получать доступ к любому элементу DOM, обращаться к атрибутам и содержимому элементов DOM, манипулировать ими. Также библиотека jQuery предоставляет удобный API для работы с AJAX. Сейчас разработка jQuery ведётся командой jQuery во главе с Джоном Резигом.
+        </p>
+    </div>
+    <div class="tabs__text" id="tabs-3">
+        <p>
+            DOM — это не зависящий от платформы и языка программный интерфейс, позволяющий программам и скриптам получить доступ к содержимому HTML-, XHTML- и XML-документов, а также изменять содержимое, структуру и оформление таких документов.
+        </p>
+    </div>
+    <div class="tabs__text" id="tabs-4">
+        <p>
+            CSS — формальный язык описания внешнего вида документа, написанного с использованием языка разметки.
+        </p>
+    </div>
+</div>
+</body>
+</html>
