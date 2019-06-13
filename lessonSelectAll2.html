@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>Этот</li>
+    <li class="test" id="test">Текст</li>
+</ul>
+<ul>
+    <li>полностью</li>
+    <li>пройден</li>
+</ul>
+<script>
+    // var elements = document.querySelectorAll('ul>li:last-child');
+    // var elements = document.querySelectorAll('.test');
+    var elements = document.querySelectorAll('#test');
+    // alert(elements);
+    for (var i = 0; i < elements.length; i++){
+        alert(elements[i].innerHTML);
+    }
+</script>
+</body>
+</html>
