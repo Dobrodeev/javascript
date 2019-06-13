@@ -1,0 +1,6 @@
+[13-Jun-2019 19:39:36 Europe/Moscow] PHP Warning:  include(Images.php): failed to open stream: No such file or directory in C:\OSPanel\domains\javascript\index.php on line 29
+[13-Jun-2019 19:39:36 Europe/Moscow] PHP Warning:  include(): Failed opening 'Images.php' for inclusion (include_path='.;c:/ospanel/modules/php/PHP-7.2-x64;c:/ospanel/modules/php/PHP-7.2-x64/PEAR/pear') in C:\OSPanel\domains\javascript\index.php on line 29
+[13-Jun-2019 19:39:36 Europe/Moscow] PHP Fatal error:  Uncaught Error: Class 'Images' not found in C:\OSPanel\domains\javascript\index.php:33
+Stack trace:
+#0 {main}
+  thrown in C:\OSPanel\domains\javascript\index.php on line 33
