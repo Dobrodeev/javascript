@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <style>
+        #check{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<script src="assets/jquery-3.3.1.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<ul id="test">
+    <li class="question">
+        JavaScript это тоже самое что и Java?
+        <ul>
+            <li><label><input type="radio" name="question1" data-true>Нет.</label></li>
+            <li><label><input type="radio" name="question1">Да.</label></li>
+            <li><label><input type="radio" name="question1">Когда как</label></li>
+        </ul>
+    </li>
+    <li class="question">
+        Сколько параментров можно передавать в фукнцию?
+        <ul>
+            <li><label><input type="radio" name="question2">Только столько, сколько указано при ее созданиию</label></li>
+            <li><label><input type="radio" name="question2">Минимум 1.</label></li>
+            <li><label><input type="radio" name="question2" data-true>Сколько угодно.</label></li>
+        </ul>
+    </li>
+    <li class="question">
+        Что такое: "use strict"?
+        <ul>
+            <li><label><input type="radio" name="question3">Просто строка</label></li>
+            <li><label><input type="radio" name="question3">Фукцния</label></li>
+            <li><label><input type="radio" name="question3" data-true>Строгий режим</label></li>
+        </ul>
+    </li>
+    <input type="button" id="next" value="next question">
+</ul>
+<input type="button" id="check" value="Проверить" ><!--onclick="checkAnswer()"-->
+<script src="testirovanie.js"></script>
+</body>
+</html>
