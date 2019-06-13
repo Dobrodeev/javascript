@@ -1,0 +1,10 @@
+/*td:nth-child(4n+2){
+    background-color: lightblue;
+}*/
+/*
+p:nth-of-type(n+2){
+    background-color: #6f42c1;
+}*/
+/*p:nth-last-of-type(n+2){
+    background-color: #6f42c1;
+}*/
