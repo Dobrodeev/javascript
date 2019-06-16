@@ -49,7 +49,7 @@
     alert(elem.getAttribute('About'));
     alert(elem.getAttribute('id'));
     elem.setAttribute('some-attribute','value');
-    var attrs = elem.attributes; // (4) можно получить коллекцию атрибутов
+    let attrs = elem.attributes; // (4) можно получить коллекцию атрибутов
     for (var i = 0; i < attrs.length; i++) {
         alert( attrs[i].name + " = " + attrs[i].value );
     }
