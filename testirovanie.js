@@ -54,12 +54,13 @@
             let isTrue = (answer[i].getAttribute('data-true') !== null);
             if (answer[i].checked){
                 noAnswer = false;
-                if (isTrue){
+                /*if (isTrue){
                     result = true;
                 }
                 else {
                     result = false;
-                }
+                }*/
+                result = isTrue;
             } 
             else {
                 if (isTrue){
