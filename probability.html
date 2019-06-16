@@ -53,12 +53,14 @@
             $.ajax({
                 url: "../assets/ajax.php",
                 type: "POST",
+                dataType: 'json',
                 cache: false,
                 data: {"rel": rel},
                 success: function (data) {
-                    $('.probability').append(data);
+                    if (+data.cmt < 3) $('.show-more').css('display', 'none');
+                    $('.probability').append(data.dt);
                     rel += 3;
-                    $(this).attr('data-rel', rel);
+                    $('.show-more').attr('data-rel', rel);
                 }
             });
         });
