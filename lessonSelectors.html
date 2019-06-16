@@ -13,7 +13,7 @@
         }*/
     </style>
 </head>
-<body>
+<body id="page">
 <script src="assets/jquery-3.3.1.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <p>Hello World!</p>
@@ -22,7 +22,7 @@
 <p id="bar">Paragraph with an id.
     <span class="foo">And this sentence is in a span.</span>
 </p>
-
+<div id="elem" about="Elephant"></div>
 <!--<form action="#" method="post">
     <fieldset>
         <legend>Sign Up Form</legend>
@@ -44,6 +44,16 @@
         </label><br />
     </fieldset>
 </form>-->
+<script>
+    // let element = document.getElementById('bar');
+    alert(elem.getAttribute('About'));
+    alert(elem.getAttribute('id'));
+    elem.setAttribute('some-attribute','value');
+    var attrs = elem.attributes; // (4) можно получить коллекцию атрибутов
+    for (var i = 0; i < attrs.length; i++) {
+        alert( attrs[i].name + " = " + attrs[i].value );
+    }
+</script>
 </body>
 </html>
 
