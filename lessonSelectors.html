@@ -22,7 +22,18 @@
 <p id="bar">Paragraph with an id.
     <span class="foo">And this sentence is in a span.</span>
 </p>
-<div id="elem" about="Elephant"></div>
+<div id="demo" about="Elephant"></div>
+
+<ul class="list" id="list" name="our-list">
+    <li>первый li</li>
+    <li>второй li</li>
+</ul>
+<input type="button" id="button" value="Нажмите на кнопку">
+<!--<ul class="list3">
+    <li>Elem 1</li>
+    <li>Elem 2</li>
+    <li>Elem 3</li>
+</ul>-->
 <!--<form action="#" method="post">
     <fieldset>
         <legend>Sign Up Form</legend>
@@ -46,13 +57,91 @@
 </form>-->
 <script>
     // let element = document.getElementById('bar');
-    alert(elem.getAttribute('About'));
+    /*alert(elem.getAttribute('About'));
     alert(elem.getAttribute('id'));
     elem.setAttribute('some-attribute','value');
     let attrs = elem.attributes; // (4) можно получить коллекцию атрибутов
     for (var i = 0; i < attrs.length; i++) {
         alert( attrs[i].name + " = " + attrs[i].value );
+    }*/
+    let arr = ['man1', 'man2', 'woman'];
+    // let ul = document.getElementsByClassName('list');
+    /*let ul = document.querySelector('.list');
+    for (let i = 0; i < arr.length; i ++){
+        let text = document.createElement('li');
+        text.innerHTML = arr[i];
+        text.addEventListener('click', printLi);
+        ul.appendChild(text);
     }
+    function printLi() {
+        alert(this.innerHTML);
+    }*/
+
+    /*let ul = document.querySelector('.list2');
+    let text = 'Еще текст.';
+    let li = document.createElement('li');
+    ul.insertBefore(li, ul.children[0]);
+    li.innerHTML = text;*/
+
+    /*let ul = document.querySelector('.list3');
+    let firstElem = ul.firstElementChild;
+    firstElem.style.color = 'red';*/
+    let ul = document.querySelector('.list');
+    // let ul = document.getElementById('list');
+    // let ul = $('#list');
+    // let ul = document.getElementsByClassName('list');
+    // let ul = document.querySelectorAll('.list');
+    // let ul = document.getElementsByTagName('ul');
+    // let ul = document.getElementsByName('our-list');
+    // alert(ul);
+    /*for (let i = 0; i < arr.length; i ++){
+        let text = document.createElement('li');
+        text.innerHTML = arr[i];
+        text.addEventListener('click', printLi);
+        ul.appendChild(text);
+    }*/
+    /*function printLi() {
+        alert(this.innerHTML);
+    }*/
+    /*alert(ul.innerHTML);
+    for (let i = 0; i < arr.length; i ++){
+        alert(arr[i]);
+    }*/
+    let text = '<p>';
+    arr.forEach(arrFunc);
+    function arrFunc(value) {
+        text += value;
+    }
+    text += '</p>';
+    document.getElementById('demo').innerHTML = text;
+    let li = document.querySelector('li');
+    // alert(li);
+    li.addEventListener('click', function () {
+        alert('Your li');
+    });
+    /*li.addEventListener('click', functionEventL);
+    function functionEventL(){
+        alert('Одна строчка.');
+    }*/
+    /*li.addEventListener('click', function () {
+        alert('Click');
+    });*/
+    /*for (let i = 0; i < li.length; i ++){
+        li.addEventListener('click', f1);
+    }*/
+    // li.addEventListener('click', f1);
+    // li.addEventListener('click', f2);
+    function f1() {
+        alert('Privet1');
+    }
+    /*function f2() {
+        alert('Privet2');
+    }*/
+    /*let button = document.getElementById('button');
+    alert(button);
+    button.addEventListener('click', function() {
+        alert('Вы кликнули по кнопке!');
+    });*/
 </script>
 </body>
 </html>
