@@ -150,6 +150,37 @@ k&Prime;<sub>x</sub> (&tau;) ( - 1) = - k&Prime; <sub>x</sub> (&tau;).</p>
     k <sub>x&prime;</sub> (&tau;) = 2e <sup>-0,5&tau;<sup>2</sup></sup> (1 - &tau; <sup>2</sup>).</p>
 <p>б) Положив &tau; = 0, получим искомую дисперсию: <br>
 D<sub>x&prime;</sub> = k<sub>x&prime;</sub> (0) = 2.</p>
+<h4>&sect 6. Взаимная корреляционная функция стационарной случайной функции</h4>
+<p><strong>Теорема.</strong> <i>Взаимная корреляционная функция дифференцируемой стационарной случайной функции X(t)
+и ее производной X&prime; (t) = x равна первой производной от ее корреляционной функции k <sub>x</sub>(&tau;),
+взятой со своим (противоположным) знаком, если индекс x стоит на втором (первом) по порядку месте:</i></p>
+<p>а) r <sub>x x&prime;</sub> (&tau;) = k &prime; <sun>x</sun> (&tau;); б) r <sub>x&prime; x</sub> (&tau;) = - k&prime; <sub>x</sub> (&tau;).</p>
+<p><i>Предполагается, что &tau; = t <sub>2</sub> - t <sub>1</sub></i>.</p>
+<p><i>Доказательство.</i> а) По определению взаимной корреляционной функции, </p>
+<p>R <sub>x x&prime;</sub> (t <sub>1</sub>, t <sub>2</sub>) = M[X&prime; (t <sub>1</sub>), X&prime; (t <sub>2</sub>)] =
+M{<span class="fraction">&part;X(t1)X(t2)/&part;t2</span>}.</p>
+<p>Операции нахождения математического ожидания и дифференцирования можна перемтавить, поэтому</p>
+<p>R <sub>x x&prime;</sub> (t <sub>1</sub>, t <sub>2</sub>) = <span class="fraction">
+    &part;M[X(t1)X(t2)]/&part;t2
+</span>=<span class="fraction">&part;Kx(t1, t2)/&part;t2</span>.</p>
+<p>Так как X(t) - стационарная функция, то ее корреляционная функция зависит только от разности аргументов:
+K <sub>x</sub> (t <sub>1</sub>, t <sub>2</sub>) = k <sub>x</sub> (&tau;), где &tau; = t <sub>2</sub> - t <sub>1</sub> и,
+следовательно, <span class="fraction">&part;&tau;/&part;t2</span> = 1.</p>
+<p>Таким образом,</p>
+<p>R <sub>x x&prime;</sub> (t <sub>1</sub>, t <sub>2</sub>) = <span class="fraction">&part;kx(&tau;)/&part;t2</span>=
+<span class="fraction">dkx(&tau;)/d&tau;</span><span class="fraction">&part;&tau;/&part;t2</span>=
+k&prime; <sub>x</sub> (&tau;)*1 = k&prime; <sub>x</sub>(&tau;).</p>
+<p>Правая часть равенства зависит только от &tau;; следовательно, и левая часть есть функция от &tau;. Обозначив
+ее через r <sub>x x&prime;</sub> (&tau;), окончательно получим</p>
+<p>r <sub>x x&prime;</sub> (&tau;) = k &prime; <sub>x</sub>(&tau;).</p>
+<p>б) Доказывается аналогично.</p>
+<p>Заметим, что поскольку взаимная корреляционная функция r <sub>x x&prime;</sub> (&tau;) зависит только от &tau;, то
+стационарная случайная функция и ее производная стационарно связаны (см. &sect;4).</p>
+<p><strong>Пример.</strong> Задана корреляционная функция k <sub>x</sub> (&tau;) = у <sup>-&tau;</sup>(1 + |&tau;|)
+стационарной случайной функции X(t). Найти взаимную корреляционную функцию r <sub>x x&prime;</sub> (&tau;) заданной
+случайной функции и ее производной.</p>
+<p><i>Решение.</i> Воспользуемся формулой <br>
+r <sub>x x&prime;</sub> (&tau;) = k&prime; <sub>x</sub> (&tau;).</p>
 <span class="fraction">1/2</span>
 <span class="fraction">3/4</span>
 <span class="fraction">1/32</span>
