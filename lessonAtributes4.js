@@ -21,3 +21,23 @@ let ul = document.querySelector('.list3');
 let firstElem = ul.firstElementChild;
 firstElem.style.color = 'red';
 
+let someul = document.getElementById('element');
+let someli = someul.previousElementSibling;
+someli.innerHTML = someli.innerHTML + '<li>Some text for li</li>';
+
+let div = document.getElementById('test');
+let nextdiv = div.nextElementSibling.nextElementSibling;
+nextdiv.innerHTML = nextdiv.innerHTML + '<p>Some text for div</p>';
+
+let lielement = document.getElementById('elem');
+let parent = lielement.parentNode;
+parent.style.backgroundColor = '#f00';
+
+let ourul = document.querySelector('.list3');
+// let ourli = ourul.lastElementChild
+// let ourli = ourul.children[2];
+let ourli = document.querySelector('li:lastChild');
+ourli.addEventListener('click', hideLi);
+function hideLi() {
+    alert('We hide li');
+}
