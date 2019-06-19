@@ -19,11 +19,17 @@
         <li>Elem 2</li>
         <li>Elem 3</li>
     </ul>
-    <input type="button" class="button-class" value="button">
+    <input type="button" class="button-class" value="button" id="button">
     <ul id="element"></ul>
     <div id="test">Div text</div>
     <div>Some div</div>
     <div class="next-div">Next div</div>
-    <script src="lessonAtributes4.js"></script>
+    <script src="lessonAtributes4.js">
+        let ourButton = document.getElementById('button');
+        alert(ourButton);
+        ourButton.addEventListener('click', function () {
+            alert('li element');
+        });
+    </script>
 </body>
 </html>

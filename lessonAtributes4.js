@@ -1,4 +1,4 @@
-let arr = ['man1', 'man2', 'woman'];
+// let arr = ['man1', 'man2', 'woman'];
 // let ul = document.getElementsByClassName('list');
 /*let ul = document.querySelector('.list');
 for (let i = 0; i < arr.length; i ++){
@@ -17,7 +17,7 @@ let li = document.createElement('li');
 ul.insertBefore(li, ul.children[0]);
 li.innerHTML = text;*/
 
-let ul = document.querySelector('.list3');
+/*let ul = document.querySelector('.list3');
 let firstElem = ul.firstElementChild;
 firstElem.style.color = 'red';
 
@@ -31,13 +31,20 @@ nextdiv.innerHTML = nextdiv.innerHTML + '<p>Some text for div</p>';
 
 let lielement = document.getElementById('elem');
 let parent = lielement.parentNode;
-parent.style.backgroundColor = '#f00';
+parent.style.backgroundColor = '#f00';*/
 
-let ourul = document.querySelector('.list3');
+// let ourul = document.querySelector('.list3');
 // let ourli = ourul.lastElementChild
 // let ourli = ourul.children[2];
-let ourli = document.querySelector('li:lastChild');
-ourli.addEventListener('click', hideLi);
+// let ourli = document.querySelector('li:lastChild');
+// let ourButton = document.querySelector('.button-class');
+// let ourButton = document.getElementById('button');
+// alert(ourButton);
+/*ourButton.addEventListener('click', function () {
+    alert('li element');
+});*/
+
+/*
 function hideLi() {
     alert('We hide li');
-}
+}*/
