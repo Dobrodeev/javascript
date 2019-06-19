@@ -1,6 +1,8 @@
-// let arr = ['man1', 'man2', 'woman'];
+let arr = ['man1', 'man2', 'woman'];
+// getElementsByClassName('list') - не работает
 // let ul = document.getElementsByClassName('list');
 /*let ul = document.querySelector('.list');
+alert(ul);
 for (let i = 0; i < arr.length; i ++){
     let text = document.createElement('li');
     text.innerHTML = arr[i];
@@ -33,16 +35,16 @@ let lielement = document.getElementById('elem');
 let parent = lielement.parentNode;
 parent.style.backgroundColor = '#f00';*/
 
-// let ourul = document.querySelector('.list3');
-// let ourli = ourul.lastElementChild
+let ourul = document.querySelector('.list3');
+let ourli = ourul.lastElementChild;
 // let ourli = ourul.children[2];
-// let ourli = document.querySelector('li:lastChild');
-// let ourButton = document.querySelector('.button-class');
+/*let ourli = document.querySelector('li:lastChild');
+let ourButton = document.querySelector('.button-class');*/
 // let ourButton = document.getElementById('button');
-// alert(ourButton);
-/*ourButton.addEventListener('click', function () {
+alert(ourli);
+ourButton.addEventListener('click', function () {
     alert('li element');
-});*/
+});
 
 /*
 function hideLi() {
