@@ -7,6 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style>
+        .hide {
+            opacity: 0;
+        }
+    </style>
 </head>
 <body>
 <script src="assets/jquery-3.3.1.js"></script>
@@ -20,7 +25,9 @@
     <tr><td>24000</td><td>12012</td><td>0,5005</td></tr>
 
 </table>
+<div class="hide"></div>
 <button class="show-more" data-rel="3">Show more</button>
+
 <h5>Список наук по сложности изучения</h5>
 <table class="table table-bordered">
     <tr><th>id</th><th>name</th><th>difficulty</th></tr>
@@ -65,6 +72,15 @@
             });
         });
     });
+    // скрытие на клик
+    /*$(function(){
+
+        $('#spoiler').click(function(){
+            $('.hidden').slideDown();
+            $('#spoiler').text('Скрыть');
+        });
+
+    });*/
 </script>
 </body>
 </html>
