@@ -38,12 +38,13 @@ parent.style.backgroundColor = '#f00';*/
 let ourul = document.querySelector('.list3');
 let ourli = ourul.lastElementChild;
 // let ourli = ourul.children[2];
-/*let ourli = document.querySelector('li:lastChild');
-let ourButton = document.querySelector('.button-class');*/
+/*let ourli = document.querySelector('li:lastChild');*/
+let ourButton = document.querySelector('.button-class');
 // let ourButton = document.getElementById('button');
-alert(ourli);
+// alert(ourli);
 ourButton.addEventListener('click', function () {
-    alert('li element');
+    // alert('li element');
+    ourul.removeChild(ourli);
 });
 
 /*
