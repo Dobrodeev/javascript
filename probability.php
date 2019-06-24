@@ -1,3 +1,25 @@
+<?php
+include 'assets/DB.php';
+$page = 1;
+if (isset($_REQUEST['page']))
+{
+    $page = addslashes($_REQUEST['page']);
+}
+$offset = $page * 5;
+$query = "SELECT * FROM probability LIMIT $offset, 5";
+$query2 = "SELECT COUNT(probability_id) as cmt FROM probability";
+$stmt = $pdo->query($query);
+$stmt2 = $pdo->query($query2);
+$stmt2 = $stmt2->fetch();
+$allRows = $stmt2['cmt'];
+$allPages = ceil($allRows / 5);
+/*echo 'AllPages: '.$allPages.'<br>';
+echo 'AllROWS/5: '.($allRows/5).'<br>';*/
+while ($row = $stmt->fetch())
+{
+    $html .= '<tr><td>'.$row['probability_id'].'</td><td>'.$row['first'].'</td><td>'.$row['second'].'</td></tr>';
+}
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -29,15 +51,15 @@
 <button class="show-more" data-rel="3">Show more</button>
 
 <h5>Список наук по сложности изучения</h5>
-<table class="table table-bordered">
-    <tr><th>id</th><th>name</th><th>difficulty</th></tr>
-    <tr><td>1</td><td>Матфизика</td><td>высокая</td></tr>
-    <tr><td>2</td><td>Исследование операций</td><td>средняя</td></tr>
-    <tr><td>3</td><td>Функциональный анализ</td><td>высокая</td></tr>
-    <tr><td>4</td><td>Операционное исчисление</td><td>средняя</td></tr>
-    <tr><td>5</td><td>Случайные процессы</td><td>средняя</td></tr>
 
+<table class="table table-bordered">
+    <?=$html?>
 </table>
+
+<? if ($allPages > 1){?>
+<form action="" method="get">
+</form>
+<?}?>
 <h4>Спрортивный инвентарь</h4>
 <table class="table table-condensed table-hover">
     <tr><th>id_product</th><th>name_product</th><th>price_product</th></tr>
@@ -64,7 +86,7 @@
                 cache: false,
                 data: {"rel": rel},
                 success: function (data) {
-                    if (+data.cmt < 3) $('.show-more').css('display', 'none');
+                    if (+data.cmt < 4) $('.show-more').css('display', 'none');
                     $('.probability').append(data.dt);
                     rel += 3;
                     $('.show-more').attr('data-rel', rel);

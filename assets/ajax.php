@@ -15,7 +15,6 @@ $pdo = new PDO($dsn, $user, $pass, $opt);
 //$rel = 'man';
 $rel = intval(addslashes($_REQUEST['rel']));
 //echo 'get_type(): '.gettype($rel).'<br>';
-$query = "SELECT * FROM probability LIMIT $rel, 3";
 //$html = '';
 /*try{
     if (gettype($rel) != 'integer' && gettype($rel) != 'float' && gettype($rel) != 'double')
@@ -24,10 +23,14 @@ $query = "SELECT * FROM probability LIMIT $rel, 3";
     }
 
 }*/
+$query = "SELECT * FROM probability LIMIT $rel, 4";
 $stmt = $pdo->query($query);
+$i = 0;
     while ($row = $stmt->fetch())
     {
+        if ($i == 3) break;
         $html .= '<tr><td>'.$row['probability_id'].'</td><td>'.$row['first'].'</td><td>'.$row['second'].'</td></tr>';
+        $i ++;
     }
     $data['dt'] = $html;
     $data['cmt'] = $stmt->rowCount();
