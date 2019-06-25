@@ -5,7 +5,8 @@ if (isset($_REQUEST['page']))
 {
     $page = addslashes($_REQUEST['page']);
 }
-$offset = $page * 5;
+// сдвиг записей в запросе
+$offset = ($page - 1) * 5;
 $query = "SELECT * FROM probability LIMIT $offset, 5";
 $query2 = "SELECT COUNT(probability_id) as cmt FROM probability";
 $stmt = $pdo->query($query);
@@ -13,8 +14,7 @@ $stmt2 = $pdo->query($query2);
 $stmt2 = $stmt2->fetch();
 $allRows = $stmt2['cmt'];
 $allPages = ceil($allRows / 5);
-/*echo 'AllPages: '.$allPages.'<br>';
-echo 'AllROWS/5: '.($allRows/5).'<br>';*/
+$html = '';
 while ($row = $stmt->fetch())
 {
     $html .= '<tr><td>'.$row['probability_id'].'</td><td>'.$row['first'].'</td><td>'.$row['second'].'</td></tr>';
@@ -57,8 +57,34 @@ while ($row = $stmt->fetch())
 </table>
 
 <? if ($allPages > 1){?>
-<form action="" method="get">
-</form>
+    <?php
+    if ($page - 3 > 0)
+    {?>
+        <a href="http://javascript/probability.php?page=1">1..</a>
+    <?php }
+    if ($page - 2 > 0)
+    {?>
+        <a href="http://javascript/probability.php?page=<?=$page - 2;?>"><?=$page - 2;?></a>
+    <?php }
+    if ($page - 1 > 0)
+    {?>
+        <a href="http://javascript/probability.php?page=<?=$page - 1;?>"><?=$page - 1;?></a>
+    <?php } ?>
+<a href="http://javascript/probability.php?page=<?=$page;?>"><?=$page;?></a>
+<?php
+    if ($page + 1 <= $allPages)
+    {?>
+        <a href="http://javascript/probability.php?page=<?=$page + 1;?>"><?=$page + 1;?></a>
+    <?php }
+    if ($page + 2 <= $allPages)
+    {?>
+        <a href="http://javascript/probability.php?page=<?=$page + 2;?>"><?=$page + 2;?></a>
+    <?php }
+    if ($page + 3 <= $allPages)
+    {?>
+        <a href="http://javascript/probability.php?page=<?=$allPages;?>">..<?=$allPages;?></a>
+    <?php }
+    ?>
 <?}?>
 <h4>Спрортивный инвентарь</h4>
 <table class="table table-condensed table-hover">
