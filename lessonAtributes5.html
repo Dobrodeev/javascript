@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style></style>
+    <link rel="stylesheet" href="style2.css">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style media="screen">
+      li{
+        border: 1px solid red
+      }
+      .block{
+        border: 3px solid green
+      }
+    </style>
+</head>
+<body>
+<script src="assets/jquery-3.3.1.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+    <ul class="list3" id="test">
+        <li>Elem 1</li>
+        <li class="block">Elem 2</li>
+        <!-- <li>Elem 3</li> -->
+    </ul>
+<p id="elem" style='border: 1px solid red'>Абзац</p>
+    <script>
+      let ul = document.getElementById('test');
+      // содержимое ul замениться, данный способ не праввильный
+      //ul.innerHTML = ul.innerHTML + '<li>3</li><li>4</li><li>5</li>';
+      let li = ul.children[1];
+      //li.insertAdjacentHTML('beforeBegin', '<li>3 new</li><li>4 new</li><li>5 new</li>');
+      //li.insertAdjacentHTML('afterEnd', '<li>3 new</li><li>4 new</li><li>5 new</li>');
+      //li.insertAdjacentHTML('afterBegin', '<li>3 new</li><li>4 new</li><li>5 new</li>');
+      li.insertAdjacentHTML('beforeEnd', '<li>3 new</li><li>4 new</li><li>5 new</li>');
+      let p = document.getElementById('elem');
+      p.insertAdjacentHTML('afterBegin', '<span>!!!</span>');
+      // append prepend after before replaceWith
+      document.body.append('div');
+      //let p1 = document.body.lastChild;
+      let p1 = document.createElement('em');
+      p1.append('Privet');
+      var url='http//ads.com/buyme?screen='+screen.width+'x'+screen.height;
+document.write('<script src="'+url+'"></scr'+'ipt>');
+    </script>
+</body>
+</html>
