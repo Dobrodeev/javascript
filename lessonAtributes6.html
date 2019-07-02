@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<ul>
+    <li>Fish
+        <ul>
+            <li>Forel</li>
+            <li>Taran</li>
+        </ul>
+    </li>
+    <li>Wood
+        <ul>
+            <li>Хвойные</li>
+            <ul>
+                <li>Лиственница</li>
+                <li>Ель</li>
+            </ul>
+            <li>Цветковые</li>
+            <ul>
+                <li>Береза</li>
+                <li>Тополь</li>
+            </ul>
+        </ul>
+    </li>
+</ul>-->
+<div id="container"></div>
+<script>
+    let obj = {
+        "Fish": {"Forel": {}, "Taranka": {}},
+        "Wood": {
+            "Хвойные": {"Лиственница": {}, "Елка": {}},
+            "Цветковые": {"Береза": {}, "Тополь": {}}
+        }
+    };
+
+    function createTree(container, object) {
+        container.appendChild(createTreeDOM(object))
+    }
+
+    function createTreeDOM(object) {
+        if (hasChildren(object)) return ;
+        /*Код создает ul*/
+        let ul = document.createElement('ul');
+        for (let key in object){
+            let li = document.createElement('li');
+            li.innerHTML = key;
+            let childrenUl = createTreeDOM(object[key]);
+            if (childrenUl) li.appendChild(childrenUl);
+            ul.appendChild(li);
+        }
+        return ul;
+    }
+
+    function hasChildren(object) {
+        for (let key in object){
+            /*Нет дочерних элементов*/
+            return false;
+        }
+        return true;
+    }
+
+    let container = document.getElementById('container');
+    createTree(container, obj);
+</script>
+</body>
+</html>
