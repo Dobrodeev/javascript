@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            box-sizing: content-box;
+        }
+        section{
+            width: 50%;
+            height: 200px;
+            border: 1px solid red;
+            padding: 20px 10px;
+        }
+        section:nth-of-type(1){
+            margin-bottom: 20px;
+        }
+        section:first-child>span{
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border: 10px solid red;
+        }
+    </style>
+</head>
+<body>
+<div id="elem">Text elem.</div>
+<section>Lorem ipsum dolor sit amet, <span>consectetur</span> adipisicing elit. Cum, vitae.</section>
+<section>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, praesentium?</section>
+<script>
+    let div = document.getElementById('elem');
+    div.style.backgroundColor = 'red';
+</script>
+</body>
+</html>
