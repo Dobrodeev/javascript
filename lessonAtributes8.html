@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h1{
+            width: 500px;
+        }
+        body{
+            color: green;
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+<h1>Hello</h1>
+<script>
+/*document.querySelector('h1').style.width = '100px';
+document.querySelector('h1').style.background = 'orange';*/
+// document.body.style.backgroundColor=prompt('Ваш фон?');
+document.body.style.display= 'none';
+setTimeout(function () {
+    document.body.style.display='';
+},1000);
+let h1 = document.body.children[0];
+h1.style.cssText = "color:red; width=300px; text-align:center; background-color:orange";
+// alert(document.body.style.color);
+    let bodystyle = getComputedStyle(document.body);
+    alert(bodystyle.background);
+</script>
+</body>
+</html>
