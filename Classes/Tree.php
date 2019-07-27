@@ -9,7 +9,7 @@
 class Tree
 {
     private $pdo;
-    
+
     public function __construct()
     {
         $host = '127.0.0.1';
@@ -29,7 +29,10 @@ class Tree
 
     public function getFromTable()
     {
-        $stmt = $this->pdo->query('SELECT * FROM test_cafedra');
+//        $stmt = $this->pdo->query('SELECT * FROM test_cafedra');
+        $sql = 'SELECT * FROM test_cafedra';
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute();
         while ($row = $stmt->fetch()) {
             echo $row['name_cafedra'] . ' ' . $row['groups_cafedra'] . '<br>';
         }
