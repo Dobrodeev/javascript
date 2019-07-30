@@ -11,10 +11,24 @@
             color: green;
             background: pink;
         }
+        /*a{
+            border-radius: 8px;
+            border: 2px solid green;
+            text-decoration: none;
+            text-align: center;
+            color: red;
+            font-weight: bold;
+            display: block;
+            height: 30px;
+            width: 100px;
+            line-height: 30px;
+        }*/
     </style>
 </head>
 <body>
 <h1>Hello</h1>
+<!--<a href="">Button</a>-->
+<div></div>
 <script>
 /*document.querySelector('h1').style.width = '100px';
 document.querySelector('h1').style.background = 'orange';*/
@@ -26,8 +40,25 @@ setTimeout(function () {
 let h1 = document.body.children[0];
 h1.style.cssText = "color:red; width=300px; text-align:center; background-color:orange";
 // alert(document.body.style.color);
-    let bodystyle = getComputedStyle(document.body);
-    alert(bodystyle.background);
+let bodystyle = getComputedStyle(document.body);
+alert(bodystyle.background);
+let div = document.querySelector('div');
+let a = document.createElement('a');
+a.className = 'button';
+a.appendChild(document.createTextNode('Button'));
+a.href="#";
+let astyles = a.style;
+astyles.borderRadius = '8px';
+astyles.border = '2px solid green';
+astyles.textDecoration = 'none';
+astyles.textAlign = 'center';
+astyles.color = 'red';
+astyles.fontWeight = 'bold';
+astyles.display = 'block';
+astyles.height = '30px';
+astyles.width = '100px';
+astyles.lineHeight = '30px';
+div.appendChild(a);
 </script>
 </body>
 </html>
