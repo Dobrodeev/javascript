@@ -3,7 +3,7 @@ ini_set('log_errors', 'On');
 ini_set('error_log', 'php_errors.log');
 session_name("test");
 session_start();
-phpinfo();
+//phpinfo();
 $_SESSION['count'] = @$_SESSION['count'] + 1;
 if ($_SESSION['count'] > 5)
 {

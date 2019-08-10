@@ -2,6 +2,7 @@
 .phpintel
 *.php-tmp
 .kdev4
+.log
 files/
 tmp/
 uploads/
