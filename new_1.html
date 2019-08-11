@@ -18,16 +18,33 @@
 <div class="to_show"></div>
 
 <script>
-    $('.click').on("click", function(){
-        // var id_el = ....;
+    $('.click').on("click", function () {
         let id_el = document.getElementById('id1').value;
+        // alert(id_el);
+        // let input = document.getElementsByTagName('input');
+        let input1 = document.getElementById('id1');
+        // alert(input.value);
+        // input1.addEventListener('click', choose1(), false);
+        // let input1 = document.getElementById('id1');
+        // let input2 = document.getElementById('id2');
+        // input1.addEventListener('click', choose1());
+        // input2.addEventListener('click', choose2());
+        function choose1() {
+            // alert(input.getAttribute('value'));
+            alert('Выбрали Запрос 1');
+        }
+        function choose2(){
+            alert('Выбрали Запрос 2');
+        }
+        // alert(input);
+        // alert(choise);
         $.ajax({
             url: "DatabaseTovar.php",
             type: "POST",
             async: false,
             data: {"id_el": id_el},
             cache: false,
-            success: function(resp){
+            success: function (resp) {
                 $('.to_show').html(resp);
             }
         });
