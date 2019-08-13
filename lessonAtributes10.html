@@ -11,18 +11,44 @@
             height: 100px;
             overflow: auto;
         }
+
+        .text-class {
+            color: red;
+        }
+
+        .my-class {
+            padding: 30px;
+        }
+
+        .button-nice {
+
+        }
     </style>
 </head>
 <body>
-<button id="button">Button</button>
+<script src="assets/jquery-3.3.1.js"></script>
+<button id="button" disabled>Button</button>
+<button class="button-nice">Button nice</button>
 <div id="test">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias, aperiam autem beatae consequatur,
     deserunt dolore dolorem, doloremque facilis fuga inventore magnam minus modi nihil non pariatur possimus similique
     tempora vitae voluptate. A adipisci corporis perferendis quo. Nesciunt, nihil nostrum!
 </div>
+<div class="output"></div>
+<input type="text" class="form-text">
+<input type="checkbox" class="form-check">
 <script>
     let button = document.querySelector('#button');
     let div = document.getElementById('test');
-    button.addEventListener('click', borderTopWidth);
+    // button.addEventListener('click', borderTopWidth);
+    $('#button').on("click", function () {
+        $('.output').text('<span>Текст.</span>');
+        $('.output').html('<span class="text-class">Текст.</span>');
+    });
+    // $('.text-class').on("click", function (){
+    // (document) ищеться в DOM в текущий момент
+    $(document).on('click', '.text-class', function () {
+        $(this).css('font-size', '18px').css('color', 'blue').addClass('my-class');
+    });
 
     function borderTopWidth() {
         // document.write(div.clientTop); Верхняя граница
@@ -30,8 +56,22 @@
         // document.write(div.offsetWidth); Ширина + padding + border
         // document.write(div.offsetHeight); Высота + padding + border
         // document.write(div.clientWidth); Ширина - scroll + padding
-        // document.write(div.clientHeight); Высота + padding
+        document.write(div.clientHeight); //Высота + padding
     }
+
+    $('.button-nice').on('click', function () {
+        $('#button').click();
+    });
+    $('.form-text').on('blur', function () {
+        if ($(this).val().length < 5) {
+            $(this).css('border', '3px solid red')
+        } else $(this).css('border', 'none');
+    });
+    $('.form-check').on('change', function () {
+        if ($(this).prop('checked')) {
+            $('#button').prop('disabled', false);
+        } else $('#button').prop('disabled', true);
+    })
 </script>
 </body>
 </html>
