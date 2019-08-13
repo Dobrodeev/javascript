@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        section{
+        section {
             width: 300px;
             height: 200px;
             padding: 25px;
             border: 20px solid red;
             overflow: auto;
         }
-        article{
+
+        article {
             width: 400px;
             height: 400px;
             border: 1px solid red;
         }
-        #inner_block{
+
+        #inner_block {
             background: green;
             width: 100px;
             height: 100px;
@@ -24,39 +26,57 @@
             left: 180px;
             top: 180px;
         }
-        main{
+
+        main {
             position: relative;
         }
-        #field{
+
+        #field {
             width: 200px;
             border: 10px groove black;
             background-color: green;
+            position: relative;
         }
-        #ball{
+
+        #ball {
             position: absolute;
+            left: 80px;
+            top: 43px;
         }
     </style>
 </head>
 <body>
-<section id="test2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut culpa cumque dolor eaque ex fugit hic illo iure labore laboriosam perferendis, praesentium sequi sint vel veniam. Corporis cupiditate eius eveniet exercitationem explicabo temporibus veniam vitae. Delectus eaque error exercitationem, illo mollitia nostrum, obcaecati pariatur porro quam, ratione rem rerum sequi tempore ut vel voluptas voluptate! Accusamus beatae, blanditiis consequuntur corporis deserunt dignissimos eius explicabo facere id in ipsam ipsum iste laudantium magnam magni nesciunt nobis nulla numquam obcaecati odio odit placeat porro quas quo quos rem sed similique totam unde vitae. Accusamus accusantium, architecto asperiores deleniti dignissimos eos esse eveniet illum laborum laudantium minus modi natus provident quidem quis temporibus vel veniam. Autem dicta, dolorem doloremque dolores error impedit nostrum numquam temporibus ut veniam? Beatae eligendi, explicabo. Adipisci delectus eius illo, ipsa laboriosam nobis pariatur, porro repellat, similique totam voluptatibus!</section>
+<section id="test2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut culpa cumque dolor eaque ex fugit hic
+    illo iure labore laboriosam perferendis, praesentium sequi sint vel veniam. Corporis cupiditate eius eveniet
+    exercitationem explicabo temporibus veniam vitae. Delectus eaque error exercitationem, illo mollitia nostrum,
+    obcaecati pariatur porro quam, ratione rem rerum sequi tempore ut vel voluptas voluptate! Accusamus beatae,
+    blanditiis consequuntur corporis deserunt dignissimos eius explicabo facere id in ipsam ipsum iste laudantium magnam
+    magni nesciunt nobis nulla numquam obcaecati odio odit placeat porro quas quo quos rem sed similique totam unde
+    vitae. Accusamus accusantium, architecto asperiores deleniti dignissimos eos esse eveniet illum laborum laudantium
+    minus modi natus provident quidem quis temporibus vel veniam. Autem dicta, dolorem doloremque dolores error impedit
+    nostrum numquam temporibus ut veniam? Beatae eligendi, explicabo. Adipisci delectus eius illo, ipsa laboriosam nobis
+    pariatur, porro repellat, similique totam voluptatibus!
+</section>
 <main id="test">
     <article>
         <div id="inner_block"></div>
     </article>
 </main>
 <div id="field">
-    <img src="https://en.js.cx/clipart/ball.svg" width="40" height="40" id="ball"> . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-    . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    <img src="https://en.js.cx/clipart/ball.svg" id="ball"> . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 </div>
 <script>
     /*alert(inner_block.offsetParent.id);
     alert(inner_block.offsetLeft);
     alert(inner_block.offsetTop);*/
-    let section = document.getElementById('test2');
+    /*let section = document.getElementById('test2');
     let scrollbuttom = section.scrollHeight - section.scrollTop - section.clientHeight;
     // alert(scrollbuttom);
-    ball.style.left = Math.round(field.clientWidth/2 - ball.offsetWidth/2) + 'px';
-    // ball.style.top = Math.round(field.clientHeight/2 - ball.offsetHeight/2) + 'px';
+    ball.style.left = Math.round(field.clientWidth / 2 - ball.offsetWidth / 2) + 'px';
+    ball.style.top = Math.round(field.clientHeight / 2 - ball.offsetHeight / 2) + 'px';*/
 </script>
 </body>
 </html>
