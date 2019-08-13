@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            border: 20px solid red;
+            padding: 15px;
+            width: 300px;
+            height: 100px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+<button id="button">Button</button>
+<div id="test">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias, aperiam autem beatae consequatur,
+    deserunt dolore dolorem, doloremque facilis fuga inventore magnam minus modi nihil non pariatur possimus similique
+    tempora vitae voluptate. A adipisci corporis perferendis quo. Nesciunt, nihil nostrum!
+</div>
+<script>
+    let button = document.querySelector('#button');
+    let div = document.getElementById('test');
+    button.addEventListener('click', borderTopWidth);
+
+    function borderTopWidth() {
+        // document.write(div.clientTop); Верхняя граница
+        // document.write(div.clientLeft); Левая граница
+        // document.write(div.offsetWidth); Ширина + padding + border
+        // document.write(div.offsetHeight); Высота + padding + border
+        // document.write(div.clientWidth); Ширина - scroll + padding
+        // document.write(div.clientHeight); Высота + padding
+    }
+</script>
+</body>
+</html>
