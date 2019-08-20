@@ -27,7 +27,7 @@
 </head>
 <body>
 <script src="assets/jquery-3.3.1.js"></script>
-<button id="button" disabled>Button</button>
+<button id="button" >Button</button>
 <button class="button-nice">Button nice</button>
 <div id="test">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias, aperiam autem beatae consequatur,
     deserunt dolore dolorem, doloremque facilis fuga inventore magnam minus modi nihil non pariatur possimus similique
@@ -39,7 +39,7 @@
 <script>
     let button = document.querySelector('#button');
     let div = document.getElementById('test');
-    // button.addEventListener('click', borderTopWidth);
+    button.addEventListener('click', borderTopWidth);
     $('#button').on("click", function () {
         $('.output').text('<span>Текст.</span>');
         $('.output').html('<span class="text-class">Текст.</span>');
@@ -51,15 +51,26 @@
     });
 
     function borderTopWidth() {
-        // document.write(div.clientTop); Верхняя граница
+        // document.write(div.clientTop); //Верхняя граница
         // document.write(div.clientLeft); Левая граница
         // document.write(div.offsetWidth); Ширина + padding + border
         // document.write(div.offsetHeight); Высота + padding + border
         // document.write(div.clientWidth); Ширина - scroll + padding
-        document.write(div.clientHeight); //Высота + padding
-    }
+        // document.write(div.clientHeight); //Высота + padding
+        //document.write(div.scrollWidth); // Ширина + scroll
+        //document.write(div.scrollHeight);// Высота содержимого - входящий scroll - (3.5+ 3.5px)
+        // document.write(div.scrollTop);// На сколько прокручено сверху
+        // div.scrollTop = 35;
+        // div.scrollTop += 5;
 
-    $('.button-nice').on('click', function () {
+        // alert(div.scrollHeight - div.scrollTop);
+        if (div.scrollHeight - Math.round(div.scrollTop) == div.clientHeight){
+            div.scrollTop = 10;
+        }
+    }
+    /*По клику на эл. увеличить ширину и высоту его в 2 раза*/
+
+/*    $('.button-nice').on('click', function () {
         $('#button').click();
     });
     $('.form-text').on('blur', function () {
@@ -71,7 +82,7 @@
         if ($(this).prop('checked')) {
             $('#button').prop('disabled', false);
         } else $('#button').prop('disabled', true);
-    })
+    })*/
 </script>
 </body>
 </html>
