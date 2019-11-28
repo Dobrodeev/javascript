@@ -1,34 +1,41 @@
 function seasonsOfYear() {
     var num, season;
     num = +prompt('Число от 1 до 4. Будет выводится пора года: зима, весна, лето, осень.');
-    switch (num)
-    {
-        case 1: season='Зима';
+    switch (num) {
+        case 1:
+            season = 'Зима';
             break;
-        case 2: season = 'Весна';
+        case 2:
+            season = 'Весна';
             break;
-        case 3 : season = 'Лето';
+        case 3 :
+            season = 'Лето';
             break;
-        case 4: season = 'Осень';
+        case 4:
+            season = 'Осень';
             break;
-        default: season = '';
+        default:
+            season = '';
     }
     alert(season)
     // alert(season);
     // alert('This is alert.')
     // document.getElementById('season').innerHTML='show season'
 }
+
 function f() {
-    document.getElementById('spoil').innerHTML='spoil - spoilt - spoilt'
+    document.getElementById('spoil').innerHTML = 'spoil - spoilt - spoilt'
 }
+
 function f1() {
     var choise
     choise = confirm('Бросаем гранату Ф1 или нет?')
     // alert(choise)
-    if (choise){
-        document.getElementById('f1').innerHTML=' Мы бросили гранату Ф1'
+    if (choise) {
+        document.getElementById('f1').innerHTML = ' Мы бросили гранату Ф1'
     }
 }
+
 function f2() {
     var a = 1991
     // var neck = Number('1967 Woodstock')

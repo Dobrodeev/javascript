@@ -35,10 +35,9 @@
 <script>
     function validform() {
         var number = document.getElementById('number').value;
-        if (isNaN(number) || number < 1 || number > 10){
+        if (isNaN(number) || number < 1 || number > 10) {
             text = 'не подходит';
-        }
-        else {
+        } else {
             text = 'OK';
         }
         document.getElementById('demo').innerHTML = text;

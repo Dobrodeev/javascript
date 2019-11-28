@@ -14,16 +14,17 @@
 <script>
     function show() {
         let a = document.querySelectorAll('a');
-        for (let i = 0; i < a.length; i ++){
+        for (let i = 0; i < a.length; i++) {
             a[i].innerHTML = a[i].innerHTML + '(' + a[i].getAttribute('href') + ')';
         }
     }
+
     // div = document.querySelectorAll('.elem');
     div = document.getElementById('elem');
     div.classList.add('someClass');
     let classNames = div.classList;
     // alert(classNames);
-    for (let i = 0; i < classNames.length; i ++){
+    for (let i = 0; i < classNames.length; i++) {
         alert(classNames[i]);
     }
 </script>

@@ -51,6 +51,6 @@ p:first-of-type{
 p:nth-child(odd){
     background: #6f42c1;
 }*/
-p:nth-child(3n){
+p:nth-child(3n) {
     background: #6f42c1;
 }

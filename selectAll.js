@@ -1,10 +1,11 @@
 function myfunc() {
-    var elements =document.getElementsByTagName('p');
-    for(var i=0;i<elements.length;i++){
-        elements[i].innerHTML=i
+    var elements = document.getElementsByTagName('p');
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].innerHTML = i
     }
     // alert(elements);
 }
+
 /*var element = document.getElementById('content');
 element.style.background = 'red';
 var elements = document.getElementsByTagName('b');

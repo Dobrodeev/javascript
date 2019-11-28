@@ -19,11 +19,11 @@
 <!--<section></section>-->
 <!-- Аналоги тега div: section, aside, footer, nav, figure,-->
 <p>Hello World!</p>
-    <p class="foo">Another paragraph, but this one has a class.</p>
-    <p><span>This is a span inside a paragraph.</span></p>
-    <p id="bar">Paragraph with an id.
-        <span class="foo">And this sentence is in a span.</span>
-    </p>
+<p class="foo">Another paragraph, but this one has a class.</p>
+<p><span>This is a span inside a paragraph.</span></p>
+<p id="bar">Paragraph with an id.
+    <span class="foo">And this sentence is in a span.</span>
+</p>
 
 <cite>Это тег cite</cite>
 <blockquote>Большинство людей больше живет по моде, чем по разуму.</blockquote>
@@ -127,9 +127,11 @@
     }*/
     let text = '<p>';
     arr.forEach(arrFunc);
+
     function arrFunc(value) {
         text += value;
     }
+
     text += '</p>';
     document.getElementById('demo').innerHTML = text;
     let li = document.querySelector('li');
@@ -152,6 +154,7 @@
     function f1() {
         alert('Privet1');
     }
+
     /*function f2() {
         alert('Privet2');
     }*/

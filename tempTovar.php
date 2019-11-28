@@ -19,24 +19,23 @@
  * Time: 13:04
  */
 $host = '127.0.0.1';
-$db   = 'testworktrafgid';
+$db = 'testworktrafgid';
 $user = 'root';
 $pass = '';
 $charset = 'utf8';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
 $opt = [
-    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-    PDO::ATTR_EMULATE_PREPARES   => false,];
+    PDO::ATTR_EMULATE_PREPARES => false,];
 $pdo = new PDO($dsn, $user, $pass, $opt);
 $id_el = isset($_REQUEST['id_el']) ? $_REQUEST['id_el'] : '';
-if ($id_el == 'Запрос 1'){
+if ($id_el == 'Запрос 1') {
     $query = 'SELECT requests.id, offers.name, requests.price, requests.count, operators.fio FROM operators
   INNER JOIN requests ON operators.id=requests.operator_id
   INNER JOIN offers ON requests.offer_id=offers.id WHERE count>2 AND operator_id IN (10,12)';
-}
-elseif ($id_el == 'Запрос 2'){
+} elseif ($id_el == 'Запрос 2') {
     $query = 'SELECT offers.name, requests.count, requests.price FROM offers
    INNER JOIN requests ON offers.id=requests.offer_id GROUP BY offer_id';
 }

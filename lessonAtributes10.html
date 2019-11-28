@@ -27,7 +27,7 @@
 </head>
 <body>
 <script src="assets/jquery-3.3.1.js"></script>
-<button id="button" >Button</button>
+<button id="button">Button</button>
 <button class="button-nice">Button nice</button>
 <div id="test">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias, aperiam autem beatae consequatur,
     deserunt dolore dolorem, doloremque facilis fuga inventore magnam minus modi nihil non pariatur possimus similique
@@ -64,25 +64,26 @@
         // div.scrollTop += 5;
 
         // alert(div.scrollHeight - div.scrollTop);
-        if (div.scrollHeight - Math.round(div.scrollTop) == div.clientHeight){
+        if (div.scrollHeight - Math.round(div.scrollTop) == div.clientHeight) {
             div.scrollTop = 10;
         }
     }
+
     /*По клику на эл. увеличить ширину и высоту его в 2 раза*/
 
-/*    $('.button-nice').on('click', function () {
-        $('#button').click();
-    });
-    $('.form-text').on('blur', function () {
-        if ($(this).val().length < 5) {
-            $(this).css('border', '3px solid red')
-        } else $(this).css('border', 'none');
-    });
-    $('.form-check').on('change', function () {
-        if ($(this).prop('checked')) {
-            $('#button').prop('disabled', false);
-        } else $('#button').prop('disabled', true);
-    })*/
+    /*    $('.button-nice').on('click', function () {
+            $('#button').click();
+        });
+        $('.form-text').on('blur', function () {
+            if ($(this).val().length < 5) {
+                $(this).css('border', '3px solid red')
+            } else $(this).css('border', 'none');
+        });
+        $('.form-check').on('change', function () {
+            if ($(this).prop('checked')) {
+                $('#button').prop('disabled', false);
+            } else $('#button').prop('disabled', true);
+        })*/
 </script>
 </body>
 </html>

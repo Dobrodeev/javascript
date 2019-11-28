@@ -1,8 +1,7 @@
 <?php
 include 'assets/DB.php';
 $page = 1;
-if (isset($_REQUEST['page']))
-{
+if (isset($_REQUEST['page'])) {
     $page = addslashes($_REQUEST['page']);
 }
 // сдвиг записей в запросе
@@ -15,9 +14,8 @@ $stmt2 = $stmt2->fetch();
 $allRows = $stmt2['cmt'];
 $allPages = ceil($allRows / 5);
 $html = '';
-while ($row = $stmt->fetch())
-{
-    $html .= '<tr><td>'.$row['probability_id'].'</td><td>'.$row['first'].'</td><td>'.$row['second'].'</td></tr>';
+while ($row = $stmt->fetch()) {
+    $html .= '<tr><td>' . $row['probability_id'] . '</td><td>' . $row['first'] . '</td><td>' . $row['second'] . '</td></tr>';
 }
 ?>
 <!doctype html>
@@ -41,10 +39,26 @@ while ($row = $stmt->fetch())
 <h5>Результаты нескольких опытов бросания монеты</h5>
 <!--<table class="table table-striped table-bordered table-hover">-->
 <table class="table table-condensed probability">
-    <tr><th>Число бросаний</th><th>Число появлений герба</th><th>Относительная частота</th></tr>
-    <tr><td>4040</td><td>2048</td><td>0,5069</td></tr>
-    <tr><td>12000</td><td>6019</td><td>0,5016</td></tr>
-    <tr><td>24000</td><td>12012</td><td>0,5005</td></tr>
+    <tr>
+        <th>Число бросаний</th>
+        <th>Число появлений герба</th>
+        <th>Относительная частота</th>
+    </tr>
+    <tr>
+        <td>4040</td>
+        <td>2048</td>
+        <td>0,5069</td>
+    </tr>
+    <tr>
+        <td>12000</td>
+        <td>6019</td>
+        <td>0,5016</td>
+    </tr>
+    <tr>
+        <td>24000</td>
+        <td>12012</td>
+        <td>0,5005</td>
+    </tr>
 
 </table>
 <div class="hide"></div>
@@ -53,57 +67,101 @@ while ($row = $stmt->fetch())
 <h5>Список наук по сложности изучения</h5>
 
 <table class="table table-bordered">
-    <?=$html?>
+    <?= $html ?>
 </table>
 
-<? if ($allPages > 1){?>
+<? if ($allPages > 1) { ?>
     <?php
-    if ($page - 3 > 0)
-    {?>
+    if ($page - 3 > 0) {
+        ?>
         <a href="http://javascript/probability.php?page=1">1..</a>
     <?php }
-    if ($page - 2 > 0)
-    {?>
-        <a href="http://javascript/probability.php?page=<?=$page - 2;?>"><?=$page - 2;?></a>
+    if ($page - 2 > 0) {
+        ?>
+        <a href="http://javascript/probability.php?page=<?= $page - 2; ?>"><?= $page - 2; ?></a>
     <?php }
-    if ($page - 1 > 0)
-    {?>
-        <a href="http://javascript/probability.php?page=<?=$page - 1;?>"><?=$page - 1;?></a>
+    if ($page - 1 > 0) {
+        ?>
+        <a href="http://javascript/probability.php?page=<?= $page - 1; ?>"><?= $page - 1; ?></a>
     <?php } ?>
-<a href="http://javascript/probability.php?page=<?=$page;?>"><?=$page;?></a>
-<?php
-    if ($page + 1 <= $allPages)
-    {?>
-        <a href="http://javascript/probability.php?page=<?=$page + 1;?>"><?=$page + 1;?></a>
+    <a href="http://javascript/probability.php?page=<?= $page; ?>"><?= $page; ?></a>
+    <?php
+    if ($page + 1 <= $allPages) {
+        ?>
+        <a href="http://javascript/probability.php?page=<?= $page + 1; ?>"><?= $page + 1; ?></a>
     <?php }
-    if ($page + 2 <= $allPages)
-    {?>
-        <a href="http://javascript/probability.php?page=<?=$page + 2;?>"><?=$page + 2;?></a>
+    if ($page + 2 <= $allPages) {
+        ?>
+        <a href="http://javascript/probability.php?page=<?= $page + 2; ?>"><?= $page + 2; ?></a>
     <?php }
-    if ($page + 3 <= $allPages)
-    {?>
-        <a href="http://javascript/probability.php?page=<?=$allPages;?>">..<?=$allPages;?></a>
+    if ($page + 3 <= $allPages) {
+        ?>
+        <a href="http://javascript/probability.php?page=<?= $allPages; ?>">..<?= $allPages; ?></a>
     <?php }
     ?>
-<?}?>
+<? } ?>
 <h4>Спрортивный инвентарь</h4>
 <table class="table table-condensed table-hover">
-    <tr><th>id_product</th><th>name_product</th><th>price_product</th></tr>
-    <tr class="active"><td>1</td><td>Шорты бифлекс</td><td>150</td></tr>
-    <tr class="success"><td>2</td><td>Шорты бифлекс высокие</td><td>250</td></tr>
-    <tr><td>3</td><td class="active">Топ (трикотаж)</td><td>80</td></tr>
-    <tr><td>4</td><td>Топ со вставками в ассортименте</td><td>150</td></tr>
-    <tr><td>5</td><td>Гетры (80 см)</td><td>130</td></tr>
-    <tr><td>6</td><td>Жидкая магнезия 50 мл</td><td>70</td></tr>
-    <tr><td>7</td><td>Жидкая магнезия 100 мл</td><td>110</td></tr>
-    <tr><td>8</td><td>Жидкая магнезия 200 мл</td><td>170</td></tr>
-    <tr><td>9</td><td>Наколенники с мягкими вставками</td><td>290</td></tr>
-    <tr><td>10</td><td>Шорты для разогрева</td><td>200</td></tr>
+    <tr>
+        <th>id_product</th>
+        <th>name_product</th>
+        <th>price_product</th>
+    </tr>
+    <tr class="active">
+        <td>1</td>
+        <td>Шорты бифлекс</td>
+        <td>150</td>
+    </tr>
+    <tr class="success">
+        <td>2</td>
+        <td>Шорты бифлекс высокие</td>
+        <td>250</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td class="active">Топ (трикотаж)</td>
+        <td>80</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Топ со вставками в ассортименте</td>
+        <td>150</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>Гетры (80 см)</td>
+        <td>130</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>Жидкая магнезия 50 мл</td>
+        <td>70</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>Жидкая магнезия 100 мл</td>
+        <td>110</td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td>Жидкая магнезия 200 мл</td>
+        <td>170</td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td>Наколенники с мягкими вставками</td>
+        <td>290</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>Шорты для разогрева</td>
+        <td>200</td>
+    </tr>
 
 </table>
 <script>
-    $(document).ready(function() {
-        $('.show-more').on("click", function(){
+    $(document).ready(function () {
+        $('.show-more').on("click", function () {
             let rel = +$(this).attr('data-rel');
             $.ajax({
                 url: "../assets/ajax.php",

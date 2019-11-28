@@ -42,10 +42,10 @@
     }
 
     function createTreeDOM(object) {
-        if (hasChildren(object)) return ;
+        if (hasChildren(object)) return;
         /*Код создает ul*/
         let ul = document.createElement('ul');
-        for (let key in object){
+        for (let key in object) {
             let li = document.createElement('li');
             li.innerHTML = key;
             let childrenUl = createTreeDOM(object[key]);
@@ -56,7 +56,7 @@
     }
 
     function hasChildren(object) {
-        for (let key in object){
+        for (let key in object) {
             /*Нет дочерних элементов*/
             return false;
         }

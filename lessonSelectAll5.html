@@ -41,16 +41,20 @@
     function handler2() {
         alert('Спасибо ещё раз!');
     }
-    function handlerCard(){
+
+    function handlerCard() {
         alert('You get some card.');
     }
+
     // let elem = document.getElementById('elem');
     let elem = document.querySelector('.elem-class');
     let card = document.querySelector('.button-class');
     // let card = document.getElementById('card');
     // let card = document.querySelectorAll('.button-class');
     card.addEventListener('click', handlerCard);
-    elem.onclick = function() { alert("Привет"); };
+    elem.onclick = function () {
+        alert("Привет");
+    };
     elem.addEventListener("click", handler1); // Спасибо!
     elem.addEventListener("click", handler2); // Спасибо ещё раз!
 </script>

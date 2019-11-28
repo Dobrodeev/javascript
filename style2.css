@@ -8,6 +8,6 @@ p:nth-of-type(n+2){
 /*p:nth-last-of-type(n+2){
     background-color: #6f42c1;
 }*/
-.next-div{
+.next-div {
     border: 1px solid darkslategrey;
 }
