@@ -54,3 +54,7 @@ p:nth-child(odd){
 p:nth-child(3n) {
     background: #6f42c1;
 }
+
+div {
+    background: gray;
+}
