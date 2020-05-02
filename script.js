@@ -1,3 +1,6 @@
+/**
+ * выбираем карту из колоды 52-х карт
+ */
 function myfunc() {
     // document.getElementById('demo').innerHTML='hell';
 
@@ -44,6 +47,9 @@ function myfunc() {
     alert(result);
 }
 
+/**
+ * выбираем масть карты
+ */
 function suitOfCard() {
     var variant = +prompt('Масть карты - число от 0 до 3', 0)
     var suit;
@@ -66,6 +72,9 @@ function suitOfCard() {
     alert(suit)
 }
 
+/**
+ *
+ */
 function textFunction() {
     // document.getElementById("demonstration").innerHTML = 'Some text for someID. Мы вызвали демонстрацию.';
     // document.write('Теперь  используем document.write')
@@ -73,6 +82,9 @@ function textFunction() {
     window.alert(result)
 }
 
+/**
+ *
+ */
 function f() {
     var x, y, z;
     x = 5;
@@ -86,3 +98,14 @@ function f() {
         document.writeln(i);
     }
 }
+
+/**
+ * изменяем содержимое и своества тега div с id = demo
+ */
+function changeDiv() {
+    document.getElementById('demo').innerHTML = 'js';
+    document.getElementById('demo').style.background = 'grey';
+    document.getElementById('demo').style.fontSize = '45px';
+}
+
+changeDiv();
